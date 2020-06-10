@@ -2,20 +2,16 @@
  * 
  */
 
-function initDataField() {
-	var jsonStr = '[{"cnName":"姓名","enName":"name","type":"String"},{"cnName":"电话","enName":"mobile","type":"String"}]';
-	var jsonObj = $.parseJSON(jsonStr);
-	datafieldService.initDataField(jsonObj);
-}
-
-function initOperButton(oper) {
-	datafieldService.initOperButton(oper);
+function initDataField(oper, domainName) {
+	var rootElement = $("#my-datafieldform").get(0);
+	datafieldService.getDataFieldAndInitDataField(oper, domainName, rootElement);
+	
 }
 
 
-function submitDatafield(oper) {
+function submitDatafield(operUrl) {
 	var jsonStr = datafieldService.itorElementToJson();
-	datafieldService.submitDatafield(jsonStr, oper);
+	datafieldService.submitDatafield(jsonStr, operUrl);
 }
 
 

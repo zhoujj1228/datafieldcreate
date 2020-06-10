@@ -1,26 +1,54 @@
 package datafieldcreate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DataField {
-	String enName;
-	String cnName;
-	String type;
-	public String getEnName() {
-		return enName;
+	String domainEnName;
+	String domainCnName;
+	String addLink;
+	String updateLink;
+	List<Field> fieldList = new ArrayList<>();
+	
+	public void addDataField(Field df) {
+		fieldList.add(df);
 	}
-	public void setEnName(String enName) {
-		this.enName = enName;
+	
+	public String getAddLink() {
+		return addLink;
 	}
-	public String getCnName() {
-		return cnName;
+
+	public void setAddLink(String addLink) {
+		this.addLink = addLink;
 	}
-	public void setCnName(String cnName) {
-		this.cnName = cnName;
+
+	public String getUpdateLink() {
+		return updateLink;
 	}
-	public String getType() {
-		return type;
+
+	public void setUpdateLink(String updateLink) {
+		this.updateLink = updateLink;
 	}
-	public void setType(String type) {
-		this.type = type;
+
+	public String getDomainEnName() {
+		return domainEnName;
 	}
+	public void setDomainEnName(String domainEnName) {
+		this.domainEnName = domainEnName;
+	}
+	public String getDomainCnName() {
+		return domainCnName;
+	}
+	public void setDomainCnName(String domainCnName) {
+		this.domainCnName = domainCnName;
+	}
+	public List<Field> getFieldList() {
+		return fieldList;
+	}
+	public void setFieldList(List<Field> fieldList) {
+		this.fieldList = fieldList;
+	}
+	
+	
 	
 }
